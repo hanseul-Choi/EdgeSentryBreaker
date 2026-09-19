@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edgesentry-breaker"
+version = "0.1.0"
+description = "Blackbox Login Anomaly Detection Red Team Testing Framework"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "EdgeSentry Red Team" }
+]
+dependencies = [
+    "requests>=2.28.0",
+]
+
+[project.scripts]
+edgesentry-breaker = "edgesentry_breaker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["edgesentry_breaker*"]
